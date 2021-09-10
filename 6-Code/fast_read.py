@@ -62,3 +62,13 @@ for img in os.listdir(img_path):
     img_array.append(io.imread(os.path.join(img_path, img)))
 print("The time difference is :", timeit.default_timer() - starttime)
 # The time difference is : 3.799766
+
+
+#TorchVision
+import torchvision.io as t_io
+starttime = timeit.default_timer()
+for img in os.listdir(img_path):
+    img_array.append(t_io.read_image(os.path.join(img_path, img)))
+print("The time difference is :", timeit.default_timer() - starttime)
+# The time difference is : 0.943434400000001
+
